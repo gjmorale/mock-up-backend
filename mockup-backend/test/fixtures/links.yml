@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: 1
+  link: MyString
+  title: MyString
+  mashup_id: 
+  source_link_id: 
+
+two:
+  value: 1
+  link: MyString
+  title: MyString
+  mashup_id: 
+  source_link_id: 

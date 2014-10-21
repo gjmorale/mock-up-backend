@@ -1,0 +1,27 @@
+<h1>Listing link_sources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @link_sources.each do |link_source| %>
+      <tr>
+        <td><%= link_source.name %></td>
+        <td><%= link_source.picture %></td>
+        <td><%= link_to 'Show', link_source %></td>
+        <td><%= link_to 'Edit', edit_link_source_path(link_source) %></td>
+        <td><%= link_to 'Destroy', link_source, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Link source', new_link_source_path %>

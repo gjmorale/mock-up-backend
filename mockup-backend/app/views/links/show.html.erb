@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @link.value %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @link.link %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @link.title %>
+</p>
+
+<p>
+  <strong>Mashup:</strong>
+  <%= @link.mashup %>
+</p>
+
+<p>
+  <strong>Source link:</strong>
+  <%= @link.source_link %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>

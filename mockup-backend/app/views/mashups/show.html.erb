@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parameters:</strong>
+  <%= @mashup.parameters %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mashup.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @mashup.user %>
+</p>
+
+<%= link_to 'Edit', edit_mashup_path(@mashup) %> |
+<%= link_to 'Back', mashups_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Keyword:</strong>
+  <%= @keyword.keyword %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @keyword.value %>
+</p>
+
+<p>
+  <strong>Mashup:</strong>
+  <%= @keyword.mashup %>
+</p>
+
+<%= link_to 'Edit', edit_keyword_path(@keyword) %> |
+<%= link_to 'Back', keywords_path %>

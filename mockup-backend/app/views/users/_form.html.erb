@@ -16,12 +16,24 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
+    <%= f.label :mail %><br>
+    <%= f.text_field :mail %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :password_digest %><br>
+    <%= f.text_field :password_digest %>
+  </div>
+  <div class="field">
+    <%= f.label :token %><br>
+    <%= f.text_field :token %>
+  </div>
+  <div class="field">
+    <%= f.label :provider %><br>
+    <%= f.text_field :provider %>
+  </div>
+  <div class="field">
+    <%= f.label :uid %><br>
+    <%= f.text_field :uid %>
   </div>
   <div class="actions">
     <%= f.submit %>

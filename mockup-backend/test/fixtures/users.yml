@@ -2,10 +2,16 @@
 
 one:
   name: MyString
-  password: MyString
-  email: MyString
+  mail: MyString
+  password_digest: MyString
+  token: MyString
+  provider: MyString
+  uid: MyString
 
 two:
   name: MyString
-  password: MyString
-  email: MyString
+  mail: MyString
+  password_digest: MyString
+  token: MyString
+  provider: MyString
+  uid: MyString

@@ -11,18 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013162430) do
+ActiveRecord::Schema.define(version: 20141021191046) do
 
-  create_table "mash_ups", force: true do |t|
-    t.string   "name"
+  create_table "keywords", force: true do |t|
+    t.string   "keyword"
+    t.integer  "value"
+    t.integer  "mashup_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "keywords", ["mashup_id"], name: "index_keywords_on_mashup_id"
+
+  create_table "link_sources", force: true do |t|
+    t.string   "name"
+    t.string   "picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", force: true do |t|
+    t.integer  "value"
+    t.string   "link"
+    t.string   "title"
+    t.integer  "mashup_id"
+    t.integer  "link_source_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "links", ["link_source_id"], name: "index_links_on_link_source_id"
+  add_index "links", ["mashup_id"], name: "index_links_on_mashup_id"
+
+  create_table "mashups", force: true do |t|
+    t.string   "parameters"
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mashups", ["user_id"], name: "index_mashups_on_user_id"
+
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "password"
-    t.string   "email"
+    t.string   "mail"
+    t.string   "password_digest"
+    t.string   "token"
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
