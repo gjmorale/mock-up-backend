@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021191046) do
+ActiveRecord::Schema.define(version: 20141027235629) do
 
   create_table "keywords", force: true do |t|
     t.string   "keyword"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20141021191046) do
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password"
   end
 
 end
